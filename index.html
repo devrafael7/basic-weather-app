@@ -9,32 +9,34 @@
 </head>
 <body class="bg-gray-100 w-full h-screen flex justify-center md:py-6 md:items-center">
     
-    <main class="w-full h-max pt-6 px-4 md:w-5/6 lg:w-2/6 md:bg-white md:pb-8 md:rounded-3xl md:shadow-lg">
-        <header class="w-full h-max">
-            <div class="w-full h-16 bg-white rounded-full shadow-md flex items-center ">
-                <input class="w-full h-full rounded-full px-6 text-xl outline-none" type="text" name="" id="" placeholder="Pesquisar">
-                <div class="h-14 w-16 bg-gray-100 rounded-full flex justify-center items-center cursor-pointer">
-                    <img class="h-1/2" src="icons/loupe.png" alt="">
+    <main class="mainContent w-full h-max pt-6 px-4 md:w-5/6 lg:w-2/6 md:bg-white md:pb-8 md:rounded-3xl md:shadow-lg hiddenTransition">
+
+        <header class="headerContent w-full h-max ">
+            <div class="w-full h-16 bg-white rounded-full shadow-md flex items-center searchBox">
+                <input class="cityInput w-full h-full rounded-full px-6 text-xl outline-none hiddenTransition" type="text" name="city-input" id="" placeholder="Pesquisar lugar">
+                <div class="searchIcon h-14 w-16 bg-gray-100 rounded-full flex justify-center items-center cursor-pointer hiddenTransition" onclick="searched()">
+                    <img class="h-1/2 hiddenTransition" src="icons/loupe.png" alt="">
                 </div>
             </div>
         </header>
-        <article class="w-full h-max mt-9 flex flex-col items-center">
-            <div class="flex flex-col w-full h-max items-center justify-center mb-11">
-                <h1 class="text-3xl font-light">
-                    Rio de Janeiro
+
+        <article class="wholeWeatherContent w-full h-max mt-9 flex flex-col items-center hiddenTransition">
+            <div class="flex flex-col w-full h-max items-center justify-center mb-11 ">
+                <h1 class="city text-3xl font-light text-center">
+                    Procure pelo Clima! ⭡
                 </h1>
-                <p class="uppercase font-medium tracking-wide">
+                <p class="dateInfo uppercase font-medium tracking-wide hiddenTransition">
                     Monday 7:00 AM
                 </p>
             </div>
-            <div class="flex flex-col w-full h-max items-center">
-                <img class="w-1/2 md:w-2/6 h-auto mb-12" src="https://imgs.search.brave.com/1DW6V2m5do5chgxT7ynqPlOEMb4ViWKTTmF-h9aq3_w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aGtvLmdvdi5oay9p/bWFnZXMvSEtPV3hJ/Y29uT3V0bGluZS9w/aWM2My5wbmc" alt="">
-                <div class="flex flex-col w-full h-max items-center justify-center">
-                    <h1 class="text-5xl flex justify-center items-start mb-2">
-                        22<span class="text-4xl">°</span>C
+            <div class="flex flex-col w-full h-max items-center ">
+                <img class="weatherIcon w-2/6 md:w-2/6 h-auto mb-12 hiddenTransition" src="https://ouch-cdn2.icons8.com/r-HFQ7z6DpngPwk_eU3N8VY31z26MzS0dKSlqPMvI20/rs:fit:368:364/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNjAx/L2QyOWE4YzVkLTNh/NzQtNDU3NC04MjU3/LWQyNTBiZTNmZDUy/NS5zdmc.png" alt="">
+                <div class="flex flex-col w-full h-max items-center justify-center ">
+                    <h1 class="temp text-5xl flex justify-center items-start mb-2 hiddenTransition">
+                        ?°C
                     </h1>
-                    <p class="uppercase text-lg text-gray-500">Good Morning!</p>
-                    <p class="uppercase text-xl text-gray-500 font-medium text-center">umidade</p>
+                    <p class="timeOfDayStatus uppercase text-lg text-gray-500 hiddenTransition">Good Morning!</p>
+                    <p class="description uppercase text-xl text-gray-500 font-medium text-center hiddenTransition">Status</p>
                 </div>
             </div>
         </article>
@@ -48,3 +50,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
