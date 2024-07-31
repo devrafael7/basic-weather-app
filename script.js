@@ -1,3 +1,5 @@
+import key from './config.js';
+
 const observer = new IntersectionObserver(entries=> {
     entries.forEach(entry=> {
         if(
@@ -44,7 +46,7 @@ function showOnScreen(data){
     console.log(data)
 }
 
-let key = "88bf38f7869a2ea9cbd6cf61ad2c480d";
+
 
 async function searchCity(theCity){
     let data = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + theCity + "&appid=" + key + "&lang=pt_br" + "&units=metric").then(
@@ -56,9 +58,11 @@ async function searchCity(theCity){
 
 const wholeLoader = document.querySelector('.wholeLoader');
 
-function searched(){
+
+document.querySelector('.searchIcon').addEventListener('click', function searched(){
     let cityInput = document.querySelector('.cityInput').value;
     wholeLoader.classList.remove('hidden');
+
     setTimeout (function(){
         searchCity(cityInput);
     }, 800)
@@ -66,7 +70,11 @@ function searched(){
     setTimeout(function(){
         wholeLoader.classList.add('hidden');
     }, 1000)
+})
+   
 
 
-}
+
+
+
 
