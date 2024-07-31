@@ -54,8 +54,19 @@ async function searchCity(theCity){
     showOnScreen(data);
 };
 
+const wholeLoader = document.querySelector('.wholeLoader');
+
 function searched(){
     let cityInput = document.querySelector('.cityInput').value;
+    wholeLoader.classList.remove('hidden');
+    setTimeout (function(){
+        searchCity(cityInput);
+    }, 800)
 
-    searchCity(cityInput);
+    setTimeout(function(){
+        wholeLoader.classList.add('hidden');
+    }, 1000)
+
+
 }
+
