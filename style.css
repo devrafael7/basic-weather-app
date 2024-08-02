@@ -10,7 +10,6 @@
 }
 
 .visibleTransition {
-  transition: opacity 1.4s, transform 1.4s;
   opacity: 1;
   transform: translateX(0);
 }

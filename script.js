@@ -1,19 +1,21 @@
-import key from './config.js';
+import  key  from './config.js';
 
-const observer = new IntersectionObserver(entries=> {
-    entries.forEach(entry=> {
-        if(
-            entry.isIntersecting &&
-            !entry.target.classList.contains('show')
-        ) {
-            entry.target.classList.add("visibleTransition", "show");
-        }
-    })
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (
+                entry.isIntersecting &&
+                !entry.target.classList.contains('show')
+            ) {
+                entry.target.classList.add("visibleTransition", "show");
+            }
+        });
+    });
 
-const hTransitions = document.querySelectorAll('.hiddenTransition');
-hTransitions.forEach(hTransition=>{
-    observer.observe(hTransition);
+    const hTransitions = document.querySelectorAll('.hiddenTransition');
+    hTransitions.forEach(hTransition => {
+        observer.observe(hTransition);
+    });
 });
 
 function showOnScreen(data){
@@ -98,10 +100,8 @@ function updateDateTime() {
     }
 }
 
-// Atualizar imediatamente
-updateDateTime();
 
-// Atualizar a cada segundo (1000 ms)
+updateDateTime();
 setInterval(updateDateTime, 1000);
 
 
