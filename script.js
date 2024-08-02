@@ -1,20 +1,6 @@
 import  key  from './config.js';
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (
-                entry.isIntersecting &&
-                !entry.target.classList.contains('show')
-            ) {
-                entry.target.classList.add("visibleTransition", "show");
-            }
-        });
-    });
 
-    const hTransitions = document.querySelectorAll('.hiddenTransition');
-    hTransitions.forEach(hTransition => {
-        observer.observe(hTransition);
-    });
     
 function showOnScreen(data){
     const city = document.querySelector('.city');
