@@ -1,6 +1,5 @@
 import  key  from './config.js';
 
-document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (
@@ -16,8 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hTransitions.forEach(hTransition => {
         observer.observe(hTransition);
     });
-});
-
+    
 function showOnScreen(data){
     const city = document.querySelector('.city');
     let weatherIcon = document.querySelector('.weatherIcon');
