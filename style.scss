@@ -5,17 +5,17 @@
     font-family: "Poppins", sans-serif;
 }
 
-.hiddenTransition {
-    transition: opacity 1.4s, transform 1.4s;
-    opacity: 0;
-    transform: translateX(-100%);
-}
-
-.visibleTransition {
-    transition: opacity 1.4s, transform 1.4s;
-    opacity: 1;
-    transform: translateX(0);
-}
+//.hiddenTransition {
+//    transition: opacity 1.4s, transform 1.4s;
+//    opacity: 0;
+//    transform: translateX(-100%);
+//}
+//
+//.visibleTransition {
+//    transition: opacity 1.4s, transform 1.4s;
+//    opacity: 1;
+//    transform: translateX(0);
+//}
 
 @keyframes bounceLoader {
     0%, 100% {
