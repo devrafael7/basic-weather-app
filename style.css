@@ -80,4 +80,9 @@ body.darkMode .dkBtn .insideDkBtn {
   body.darkMode .dkBtn {
     padding-left: 68px;
   }
+}
+@media (min-width: 300px) and (max-width: 700px) {
+  body.darkMode .dkBtn {
+    padding-left: 55px;
+  }
 }/*# sourceMappingURL=style.css.map */
