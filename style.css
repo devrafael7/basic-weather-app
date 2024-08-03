@@ -3,6 +3,21 @@
   font-family: "Poppins", sans-serif;
 }
 
+.hiddenTransition {
+  transition: opacity 1.4s, transform 1.4s;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.visibleTransition {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.show {
+  opacity: 1;
+}
+
 @keyframes bounceLoader {
   0%, 100% {
     transform: translateY(0);
