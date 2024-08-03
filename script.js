@@ -36,8 +36,10 @@
             weatherIcon.src = "https://cdn-icons-png.flaticon.com/128/1779/1779751.png";
         } else if (data.weather[0].description === "nuvens dispersas") {
             weatherIcon.src = "https://cdn-icons-png.flaticon.com/128/1779/1779754.png";
-        } else if (data.weather[0].description === "céu limpo" && hours >= 18) {
-            weatherIcon.src = "https://cdn-icons-png.flaticon.com/128/4735/4735038.png";
+        } else if (data.weather[0].description === "céu limpo") {
+            if (hours >= 18 || hours < 4) {
+                weatherIcon.src = "https://cdn-icons-png.flaticon.com/128/4735/4735038.png";
+            }
         } else if (data.weather[0].description === "céu limpo") {
             weatherIcon.src = "https://cdn-icons-png.flaticon.com/128/5904/5904053.png";
         } else if (data.weather[0].description === "chuva leve") {
