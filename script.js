@@ -43,7 +43,7 @@ function showOnScreen(data){
     console.log(data)
 }
 
-
+let key = "807b807190283b8bbf44326c1227677a";
 
 async function searchCity(theCity){
     let data = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + theCity + "&appid=" + key + "&lang=pt_br" + "&units=metric").then(
