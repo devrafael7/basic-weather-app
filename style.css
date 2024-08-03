@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   font-family: "Poppins", sans-serif;
+  transition: background-color 0.5s ease;
 }
 
 .hiddenTransition {
@@ -36,4 +37,42 @@
 
 .loader > div:nth-child(3) {
   animation-delay: 0.4s;
+}
+
+.dkBtn {
+  transition: 0.4s ease;
+}
+
+body.darkMode {
+  background: #181821;
+  color: rgba(255, 255, 255, 0.849);
+}
+body.darkMode .mainContent {
+  background: rgba(56, 56, 77, 0.5960784314);
+}
+body.darkMode .mainContent .searchBox {
+  background: #525266;
+}
+body.darkMode .mainContent .searchBox input {
+  background: rgba(82, 82, 102, 0.8156862745);
+}
+body.darkMode .mainContent .searchBox .searchIcon {
+  background: rgba(65, 65, 82, 0.8156862745);
+}
+body.darkMode .mainContent .searchBox .searchIcon img {
+  filter: invert(100%) brightness(100%);
+  opacity: 80%;
+}
+body.darkMode .mainContent .text-gray-500 {
+  color: rgba(255, 255, 255, 0.788);
+}
+body.darkMode .mainContent .text-gray-600 {
+  color: rgba(255, 255, 255, 0.603);
+}
+body.darkMode .dkBtn {
+  background: rgba(93, 93, 114, 0.8156862745);
+  padding-left: 50px;
+}
+body.darkMode .dkBtn .insideDkBtn {
+  background: rgba(196, 196, 255, 0.8156862745);
 }/*# sourceMappingURL=style.css.map */

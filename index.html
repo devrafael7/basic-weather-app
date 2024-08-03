@@ -19,7 +19,7 @@
         </div>
 
         <header class="headerContent w-full h-max ">
-            <div class="w-full h-16 bg-white rounded-full shadow-md flex items-center searchBox">
+            <div class="w-full h-16 bg-none rounded-full shadow-md flex items-center searchBox">
                 <input class="cityInput w-full h-full rounded-full px-6 text-xl outline-none hiddenTransition" type="text" name="city-input" id="" placeholder="Pesquisar lugar">
                 <div class="searchIcon h-14 w-16 bg-gray-100 rounded-full flex justify-center items-center cursor-pointer hiddenTransition">
                     <img class="h-1/2 hiddenTransition" src="icons/loupe.png" alt="">
@@ -27,7 +27,7 @@
             </div>
         </header>
 
-        <article class="wholeWeatherContent w-full h-max mt-14 md:mt-9 lg:mt-9 flex flex-col items-center hiddenTransition">
+        <article class="wholeWeatherContent w-full h-max mt-14 md:mt-9 lg:mt-9 flex flex-col items-center hiddenTransition lg:mb-8">
             <div class="flex flex-col w-full h-max items-center justify-center mb-11 ">
                 <h1 class="city text-3xl font-light text-center noTranslate mb-2">
                     Procure pelo Clima!
@@ -51,6 +51,14 @@
             </div>
         </article>
 
+        <footer class="w-full h-max absolute bottom-2 flex justify-between items-end left-0 px-5">
+            <div class="w-20 h-7 bg-blue-200 rounded-full shadow-md px-1 py-1 cursor-pointer dkBtn">
+                <div class="h-full w-5 bg-white rounded-full insideDkBtn">
+                </div>
+            </div>
+
+            <p class="font-light text-xs text-center leading-tight">&copy; 2024 Rafael Oliveira. Todos os direitos reservados.</p>
+        </footer>
     </main>
 
 

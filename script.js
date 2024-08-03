@@ -52,11 +52,12 @@
     const timeOfDayStatus = document.querySelector('.timeOfDayStatus');
     const dateInfo = document.querySelector('.dateInfo');
     
+    
     function updateDateTime() {
         const now = new Date();
         const hours = now.getHours();
-        const datePart = now.toDateString();
-        const timePart = now.toTimeString().split(' ')[0];
+        const datePart = now.toLocaleDateString('pt-BR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+        const timePart = now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
     
         const dateTime = `${datePart} ${timePart}`;
         dateInfo.innerHTML = dateTime;
@@ -105,6 +106,15 @@ document.querySelectorAll('.noTranslate').forEach(noTranslates => {
     noTranslates.setAttribute("translate", "no")
 });
 
+const dkBtn = document.querySelector('.dkBtn');
+const body = document.querySelector('body');
+const mainContent = document.querySelector('.mainContent');
+
+dkBtn.addEventListener('click', ()=> {
+    dkBtn.classList.toggle('darkMode');
+    body.classList.toggle('darkMode');
+    mainContent.classList.toggle('darkMode');
+})
 
 
 
