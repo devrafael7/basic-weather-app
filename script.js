@@ -84,7 +84,6 @@ function updateDateTime() {
     const dateTime = `${datePart} ${timePart}`;
     dateInfo.innerHTML = dateTime;
 
-    // Extrair a hora em formato numérico para comparação
     const hours = now.getHours();
 
     if (hours >= 18) {
